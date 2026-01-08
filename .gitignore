@@ -3,3 +3,9 @@ dist
 .env
 .env.local
 *.log
+
+# TypeScript compiled files (in case they appear in src/)
+src/**/*.js
+src/**/*.d.ts
+src/**/*.js.map
+src/**/*.d.ts.map
