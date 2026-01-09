@@ -1,5 +1,5 @@
 # --- Build Stage ---
-FROM node:20-alpine AS build
+FROM public.ecr.aws/docker/library/node:20-alpine AS build
 WORKDIR /app
 COPY package*.json ./
 # Use 'npm ci' for clean installs if a package-lock.json is present,
@@ -10,7 +10,7 @@ COPY . .
 RUN npm run build 
 
 # --- Production Stage ---
-FROM node:20-alpine AS production
+FROM public.ecr.aws/docker/library/node:20-alpine AS production
 WORKDIR /app
 
 # Copy only production dependencies from the build stage
