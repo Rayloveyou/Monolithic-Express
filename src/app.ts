@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.get('/health', (req, res) => {
-  res.json({ status: 'ok healthy' });
+  res.json({ status: 'ok healthyz' });
 });
 
 app.use('/api/products', productRoutes);
